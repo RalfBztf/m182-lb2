@@ -1,5 +1,6 @@
 services:
   docsify:
+    restart: always
     user: 1000:1000
     build: ./docker/docsify
     container_name: docsify
