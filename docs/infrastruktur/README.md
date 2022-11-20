@@ -9,8 +9,6 @@ Dazu musste noch der DNS auf allen Geräten auf den DC angepasst werden. Den Win
 
 ## Login
 
-DC auch???????????
-
 Auf allen Servern wird man automatisch mit vagrant eingeloggt. Beim DC mit dem AD-User vagrant und bei der win10 und wef mit dem lokalen User vagrant. Optimal wäre für jeden Server einen einzelnen AD-User zu machen und nicht automatisch einzuloggen.
 
 ## Installierte Dienste und Zugriff
