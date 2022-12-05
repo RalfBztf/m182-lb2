@@ -30,7 +30,7 @@ Auf allen ist Velociraptor (Zugriff via Port 5985) installiert, was wahrscheinli
 
 ## ELK-VM
 
-## Vagrant File
+## Vagrant
 
-
-
+Mittels Vagrant können automatisert virtuelle Maschinen bereitgestellt werden. Ähnlich wie bei Docker-Compose (docker-compose.yml) gibt es bei Vagrant das Vagrantfile. Mit ```vagrant up``` kann die VM automatisiert erstellt werden. Im Vagrant File definiert man alle Eigenschaften zur VM. Hostnamen, base Image, Netzwerke, RAM, CPU etc. Vordefinierte Konfigurationsdateien können kopiert werden und Installationsskripte (z.B Powershell) können einmalig ausgeführt werden.
+Auf dem DC wird z.B das Skript ```configure-ou.ps1``` ausgeführt, um die AD OUs zu erstellen. Der ELK-Stack wird mit dem ELK.sh konfiguriert.
