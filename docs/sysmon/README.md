@@ -20,7 +20,6 @@ Weitere hilfreiche Informationen auf [Microsoft](https://learn.microsoft.com/en-
 Auf unseren Systemen ist Sysmon mittels Vagrantfile direkt mitinstalliert worden.
 Es gäbe auch die Möglichkkeit über ein Softwareverteilungssystem wie SCCM zu machen oder auch per GPO.
 
-
 ### Konfiguration
 
 Auf z.B dem DC ist Sysmon (inkl. Configfile) in ```C:\ProgramData\Sysmon``` installiert.
