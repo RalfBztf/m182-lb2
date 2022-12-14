@@ -3,3 +3,4 @@
     * [WSUS](/wsus/)
     * [sysmon](/sysmon/)
     * [OSQuery](/osquery/)
+    * [Winlogbeat](/winlogbeat/)

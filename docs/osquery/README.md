@@ -10,8 +10,6 @@ Folgender Befehl ausführen, um den DC an der Kolide Software bekannt zu machen:
 .\launcher.exe --enroll_secret=enrollmentsecret --hostname=logger:8412 --root_directory="C:\\Program Files\\osquery" --insecure
 ```
 
-CMD schliessen und den Dienst "osqueryId" starten.
-
 ## Recherche
 
 OSquery kann mit einem installierten Agent diverse Information vom Betriebsystem auslesen. (Hostname, IP, MAC-Adresse, CPU, RAM, Registry-Keys etc.) Diese werden in einer Datenbank gespeichert und können einfach mit SQL abgefragt werden.
