@@ -4,3 +4,4 @@
     * [sysmon](/sysmon/)
     * [OSQuery](/osquery/)
     * [Winlogbeat](/winlogbeat/)
+    * [Security Dashboards](/security/)

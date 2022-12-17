@@ -11,18 +11,41 @@ Download [hier](https://www.elastic.co/downloads/beats/winlogbeat). Extrahieren 
 ```winlogbeat.yml``` in diesem Verzeichnis folgendermassen bearbeiten:
 
 ![elasticsearch](elasticsearch.png)
+
 Der hier hinterlegte User muss berechtigt sein Winlogbeat einzurichten.
+**Nachtrag:** ```allow_older_versions: true```, muss noch hinzugefügt werden, ansonsten kann Kibana keine Verbindung zur unseren veralteten Elasticsearch-Instanz herstellen. (Error in Logfile erschienen)
+
 
 ![kibana](kibana.png)
 
-Die Winlogbeat Eventlog Einstellungen können auf Standard belassen werden. Standardmässig werden Application, Security und System Logs aktiviert. Die Application Logs, welche älter als 72 Stunden sind, werden ignoriert.
+Hostname der Kibana-Instanz, sowie User angeben.
+
+Die Winlogbeat Eventlog Einstellungen können auf Standard belassen werden. Standardmässig werden Application, Security System, Sysmon und noch ein paar weitere Logs aktiviert. Die Application Logs, welche älter als 72 Stunden sind, werden ignoriert.
+
 ![winlogbeat_eventlog](winlogbeat_eventlogs.png)
 
 Testen mit: ```.\winlogbeat.exe test config -c .\winlogbeat.yml -e```
 
-Sollte ```Config OK``` ausgeben.
+Sollte ein paar Logs ausgeben und am Schluss ```Config OK``` ausgeben.
 
 ## Setup Assets
 
-.\winlogbeat.exe setup -e
+Winlogbeat wird mit vordefinierten Assets zum Parsen, Indizieren und Visualisieren der Daten geliefert.
 
+```.\winlogbeat.exe setup -e```
+
+Sollte etwa so aussehen und am Schluss ```Loaded Ingest pipelines``` ausgeben
+
+![Winlogbeat_setup](winlogbeat_setup.png)
+
+## Starten des Services
+
+```powershell
+Start-Service winlogbeat
+```
+
+## Logdaten anzeigen
+
+Sysmon Logs sind hier drin auch zu finden.
+
+![Winlogbeat_discover](winlogbeat_discover.png)
