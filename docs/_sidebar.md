@@ -5,3 +5,4 @@
     * [OSQuery](/osquery/)
     * [Winlogbeat](/winlogbeat/)
     * [Security Dashboards](/security/)
+    * [Fleet](/fleet/)
