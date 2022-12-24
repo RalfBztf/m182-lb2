@@ -6,7 +6,7 @@ WSUS wird verwendet, um für Windows spezifische Update freizugeben. Dazu gehör
 
 WSUS Alternativen wären SCCM, Ivanti Securiry Controls oder Matrix42 Patch Management. Auch viele andere Softwareverteilungssysteme bieten das verteilen von Updates an.
 
-Wenn man die PowerShell als Admin auf dem WSUS-Server ausführt, kann man diverse PowerShell Befehle nutzen, um den WSUS zu starten. Um eine Synchronisation zu steuern braucht man nur folgendes auszuführen:
+Wenn man die PowerShell als Admin auf dem WSUS-Server ausführt, kann man diverse PowerShell Befehle nutzen, um den WSUS zu managen. Um eine Synchronisation zu steuern braucht man nur folgendes auszuführen:
 
 ```powershell
 (Get-WsusServer).GetSubscription().StartSynchronization()
@@ -147,3 +147,17 @@ Anhand dieses Baumes in der 2. Spalte kann erkannt werden, ob ein Update superse
 ![approve-test](screenshots/approve-test.png)
 
 Das eine Update wird für Windows Server 2016 gebraucht. Zuerst gebe ich das zum testen mal nur der WinServer2016_test Gruppe frei.
+
+## Powershell-Cmdlets Client
+
+Wie für den Dienst selbst, gibt es auch für Client nebst GPOs, die Möglichkeit Updates mit Powershell zu verwalten. Nach Updates des Types Software, welche nicht installiert sind suchen:
+
+```powershell
+Start-WUScan -SearchCriteria "Type='Software' AND IsInstalled=0"
+```
+
+Falls gleich alle verfügbaren installiert werden sollen:
+
+```powershell
+Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -AutoReboot
+```

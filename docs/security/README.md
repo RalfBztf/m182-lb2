@@ -2,7 +2,7 @@
 
 ## Aufbau
 
-Security Rules, fragen Daten anhand von Attributen (id, name, state etc.) aus einem Index aus.
+Security Rules, fragen Daten anhand von Attributen (id, name, state etc.) aus einem Index (z.B Winlogbeat-*) aus.
 
 ![rules](rules.png)
 

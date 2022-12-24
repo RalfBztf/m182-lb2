@@ -18,7 +18,7 @@ Der hier hinterlegte User muss berechtigt sein Winlogbeat einzurichten.
 
 ![kibana](kibana.png)
 
-Hostname der Kibana-Instanz, sowie User angeben.
+Hostname der Kibana-Instanz, sowie User und Passwort angeben.
 
 Die Winlogbeat Eventlog Einstellungen können auf Standard belassen werden. Standardmässig werden Application, Security System, Sysmon und noch ein paar weitere Logs aktiviert. Die Application Logs, welche älter als 72 Stunden sind, werden ignoriert.
 
